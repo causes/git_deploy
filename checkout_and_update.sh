@@ -1,4 +1,8 @@
 #!/bin/bash
+# Example invocation:
+#  REPO_DIR=/tmp/git_deploy/repo
+#  GIT_REPO=git@github.com:causes/puppet-configs.git ./checkout_and_update.sh
+#  /tmp/git_deploy/deploys/ ee86581468b6a8bc56b840e388c009578958f0f6
 
 deploys_dir=$1
 revision=$2
