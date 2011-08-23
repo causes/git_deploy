@@ -1,7 +1,8 @@
 #!/bin/bash
 # Example invocation:
-#  REPO_DIR=/tmp/git_deploy/repo
-#  GIT_REPO=git@github.com:causes/puppet-configs.git ./checkout_and_update.sh
+#  REPO_DIR=/tmp/git_deploy/repo \
+#  GIT_REPO=git@github.com:causes/puppet-configs.git \
+#  ./checkout_and_update.sh \
 #  /tmp/git_deploy/deploys/ ee86581468b6a8bc56b840e388c009578958f0f6
 
 deploys_dir=$1
@@ -21,7 +22,7 @@ if [ ! -d $repo_dir ]
     echo "Fetching"
     cd $repo_dir && git fetch
     if [ "$?" -ne "0" ]; then
-      echo "There was a problem resetting to revisoin $revision"
+      echo "There was a problem resetting to revision $revision"
       exit -1
     fi
 fi
